@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorExample"
+    tools:context=".activity.SewaSepedaActivity">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbSewaSepeda"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tbSewaSepeda"
+        android:clipToPadding="false"
+        android:fillViewport="false"
+        android:paddingBottom="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:strokeColor="@color/colorPrimaryDark"
+                app:strokeWidth="5dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/idSewa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Identitas Penyewa"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="19sp"
+                        android:fontFamily="@font/open_sans_semibold"/>
+                    
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idSewa"
+                        android:layout_marginTop="20dp"
+                        android:text="Nama Penyewa (*)"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        android:fontFamily="@font/open_sans_semibold"/>
+                    
+                    <EditText
+                        android:id="@+id/eTNama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtName"
+                        android:hint="Masukan Nama (Max 15 karakter)"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/open_sans_semibold"/>
+                    
+                    <TextView
+                        android:id="@+id/txtAlamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/eTNama"
+                        android:layout_marginTop="20dp"
+                        android:text="Alamat (*)"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        android:fontFamily="@font/open_sans_semibold"/>
+
+                    <EditText
+                        android:id="@+id/eTAlamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtAlamat"
+                        android:hint="Masukan alamat anda"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/open_sans_semibold"/>
+                    
+                    <TextView
+                        android:id="@+id/txtTelp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/eTAlamat"
+                        android:layout_marginTop="20dp"
+                        android:text="No.  Telp/HP (*)"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        android:fontFamily="@font/open_sans_semibold"/>
+                    
+                    <EditText
+                        android:id="@+id/eTHP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtTelp"
+                        android:hint="Masukan no telp/HP"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/open_sans_semibold"/>
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:strokeWidth="5dp"
+                app:strokeColor="@color/colorPrimaryDark">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/idDtSepeda"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Data Sepeda"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="19sp"
+                        android:fontFamily="@font/open_sans_semibold"/>
+                    
+                    <TextView
+                        android:id="@+id/txtMerk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idDtSepeda"
+                        android:layout_marginTop="20dp"
+                        android:text="Merk Sepeda (*)"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        android:fontFamily="@font/open_sans_semibold"/>
+                    
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/txtMerk"/>
+                    
+                    <TextView
+                        android:id="@+id/txtPromo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/spinner"
+                        android:layout_marginTop="20dp"
+                        android:text="Promo"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        android:fontFamily="@font/open_sans_semibold"/>
+
+                    <RadioGroup
+                        android:id="@+id/promoGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtPromo"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbWeekDay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="WeekDay (10%)"
+                            android:textColor="@color/colorPrimaryDark"/>
+                        
+                        <RadioButton
+                            android:id="@+id/rbWeekEnd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="WeekEnd (25%)"
+                            android:textColor="@color/colorPrimaryDark"/>
+
+                    </RadioGroup>
+                    
+                    <TextView
+                        android:id="@+id/txtLmSewa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/promoGroup"
+                        android:layout_marginTop="20dp"
+                        android:text="Lama Sewa (*)"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        android:fontFamily="@font/open_sans_semibold"/>
+                    
+                    <EditText
+                        android:id="@+id/eTLamaSewa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtLmSewa"
+                        android:hint="Masukan lama hari Penyewaan"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textSize="16sp"/>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:id="@+id/selesaiHitung"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@drawable/button_background"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:text="Selesai Transaksi"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
